@@ -28,13 +28,7 @@ public class Main {
 			FractionFormatter.format(mas[i]);
 		}
 		
-	//	Fraction f3;
-	//	f3 = action.add(mas[0], mas[1]);
-		
-	//	FractionFormatter.format(f3);
-	//	action.sokr(f3);
-	//	FractionFormatter.format(f3);
-
+	
 	}
 
 
