@@ -1,4 +1,4 @@
-package com.epam.ias.astud;
+package com.epam.ias.astud; 
 
 public class Main {
 	public static void main(String[] args) {

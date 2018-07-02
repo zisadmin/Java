@@ -1,4 +1,4 @@
-package com.epam.ias.astud;
+package com.epam.ias.astud; 
 
 public class GroupAnalyse {
 	public static void groupeRate(Group grp) {

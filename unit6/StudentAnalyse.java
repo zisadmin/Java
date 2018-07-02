@@ -1,4 +1,4 @@
-package com.epam.ias.astud;
+package com.epam.ias.astud; 
 
 public class StudentAnalyse {
 	public static double averageScore(Student stud) {

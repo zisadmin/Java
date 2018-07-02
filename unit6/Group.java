@@ -1,4 +1,4 @@
-package com.epam.ias.astud;
+package com.epam.ias.astud; 
 
 public class Group {
 	//int numberOfStudents;
@@ -18,5 +18,4 @@ public class Group {
 	public void setStudents(Student[] students) {
 		this.students = students;
 	}
-
 }
