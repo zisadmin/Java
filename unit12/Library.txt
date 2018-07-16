@@ -1,0 +1,4 @@
+T|Java|Unknown|1980|5|Easy
+F|Ten Little Indians|Agata Christy|1970|2|Detective
+H|Basic Theology|A.Osipov|1998|1|Religion
+H|Bible|G|2018|4|Religion
