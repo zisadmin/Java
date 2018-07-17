@@ -16,7 +16,7 @@ public class FictionBook extends Books{
 
 	@Override
 	public void printBook() {
-		System.out.println("Title of Fiction book:" + getTitle() + " Author:" + getAuthor() +
+		System.out.println("Title of Fiction book " + getTitle() + " Author:" + getAuthor() +
 				" Year of Published:" + getYearPublished()+" Number of books:" + getNumber()+
 				" Style:" + getStyle()
 				);

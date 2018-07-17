@@ -4,27 +4,28 @@ import java.io.*;
 
 public class Book {
 	public static void  main (String args []) {
+			
+		
 		String libFile = "c:\\_Work_\\_Lib_Data\\Library.txt";
 		Library homeLibrary = new Library();
 			
 		BufferedReader br = null;
 		String strFromFile = "";
-		String SplitChar = "|";
+		String SplitChar = ";";
 		Difficulty diff;
 		Style stl;
 		Belonging blg;
 		
 		 
-		 try {
-			    
+		 try {			    
 
 				br = new BufferedReader(new FileReader(libFile));
 				while ((strFromFile = br.readLine()) != null) {
-
-					// use | as separator
+					
+					// use ; as separator
 					String[] strSpl = strFromFile.split(SplitChar);
 										
-					if (strFromFile.substring(0,1) =="T") {
+					if (strSpl[0].compareTo("T")==0 ) {
 						switch (strSpl[5]) {
 						case "Easy": diff=Difficulty.Easy;
 									break;
@@ -32,14 +33,16 @@ public class Book {
 									break;
 						case "Hard":diff=Difficulty.Hard;
 									break;
-						default:	diff=Difficulty.Easy;
+						default:	diff=Difficulty.Medium;
 									break;
 						}
+											
 						homeLibrary.add(new TechBook(strSpl[1], strSpl[2], Integer.parseInt(strSpl[3]), 
 								Integer.parseInt(strSpl[4]),diff ));
+												
 						}
 					
-					if (strFromFile.substring(0,1) =="H") {
+					if (strSpl[0].compareTo("H")==0 ) {
 						switch (strSpl[5]) {
 						case "Religion": blg=Belonging.Religion; 
 								break;
@@ -47,14 +50,14 @@ public class Book {
 								break;
 						case "Psychology": blg=Belonging.Psychology; 
 								break;
-						default:			blg=Belonging.Religion;
+						default:			blg=Belonging.Psychology;
 								break;
 						}
 						homeLibrary.add(new HumanBook(strSpl[1], strSpl[2], Integer.parseInt(strSpl[3]), 
 								Integer.parseInt(strSpl[4]), blg));
 						}
 					
-					if (strFromFile.substring(0,1) =="F") {
+					if (strSpl[0].compareTo("F")==0 ) {
 						switch (strSpl[5]) {
 						case "Detective": stl=Style.Detective; 
 								break;
@@ -62,12 +65,13 @@ public class Book {
 								break;
 						case "Memoir": stl=Style.Memoir; 
 								break;
-						default: 		stl=Style.Detective;
+						default: 		stl=Style.Memoir;
 								break;
 						}
 						homeLibrary.add(new FictionBook(strSpl[1], strSpl[2], Integer.parseInt(strSpl[3]), 
 								Integer.parseInt(strSpl[4]), stl));
-						}
+						}					 
+					 
 					
 					}//while
 				
@@ -90,7 +94,10 @@ public class Book {
 						e.printStackTrace();
 					}
 				}
+			}		 
+		    
+		 for (Books item : homeLibrary.getTbooks()) {
+				item.printBook();
 			}
-	
 	}
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-	private List<Books> tbooks = new ArrayList<Books>();
+	public List<Books> tbooks = new ArrayList<Books>();
 	
 	public Library() {
 	}
@@ -24,6 +24,13 @@ public class Library {
 	public void setTbooks(List<Books> tbooks) {
 		this.tbooks = tbooks;
 	}
+	/*public void printLib() {
+		System.out.println("InLIB+");
+		for (Books item : tbooks) {
+			System.out.println("InLIB");
+			item.printBook();
+		}
+	}*/
 	
 	
 
